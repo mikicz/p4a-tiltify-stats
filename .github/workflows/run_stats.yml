@@ -22,6 +22,10 @@ jobs:
         poetry config virtualenvs.create false
         poetry install
     - name: Run stats
+      env:
+        TILTIFY_TOKEN: ${{ secrets.TILTIFY_TOKEN }}
+        DOCUMENT_ID: ${{ secrets.DOCUMENT_ID }}
+        GDRIVE_API_CREDENTIALS: ${{ secrets.GDRIVE_API_CREDENTIALS }}
       run: |
         jupyter nbconvert --to python RunStats.ipynb
         python RunStats.py
