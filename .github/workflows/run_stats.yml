@@ -26,6 +26,9 @@ jobs:
         TILTIFY_TOKEN: ${{ secrets.TILTIFY_TOKEN }}
         DOCUMENT_ID: ${{ secrets.DOCUMENT_ID }}
         GDRIVE_API_CREDENTIALS: ${{ secrets.GDRIVE_API_CREDENTIALS }}
+        GDRIVE_API_CREDENTIALS_TOKEN: ${{ secrets.GDRIVE_API_CREDENTIALS_TOKEN }}
       run: |
+        echo "${GDRIVE_API_CREDENTIALS}" | base64 -d > client_secret.json
+        echo "${GDRIVE_API_CREDENTIALS_TOKEN}" | base64 -d > sheets.googleapis.com-python.json
         jupyter nbconvert --to python RunStats.ipynb
         python RunStats.py
