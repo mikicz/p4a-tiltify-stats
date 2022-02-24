@@ -24,7 +24,7 @@ jobs:
     - name: Run stats
       env:
         TILTIFY_TOKEN: ${{ secrets.TILTIFY_TOKEN }}
-        DOCUMENT_ID: ${{ secrets.DOCUMENT_ID }}
+        DOCUMENT_URL: ${{ secrets.DOCUMENT_URL }}
         GDRIVE_API_CREDENTIALS: ${{ secrets.GDRIVE_API_CREDENTIALS }}
         GDRIVE_API_CREDENTIALS_TOKEN: ${{ secrets.GDRIVE_API_CREDENTIALS_TOKEN }}
       run: |
