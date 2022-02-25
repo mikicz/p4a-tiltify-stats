@@ -1,5 +1,7 @@
 name: Run Stats
 
+concurrency: gsheets
+
 on:
   workflow_dispatch:
   schedule:
