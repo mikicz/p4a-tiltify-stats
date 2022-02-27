@@ -5,3 +5,5 @@ venv
 .ipynb_checkpoints
 client_secret.json
 RunStats.py
+*-cloud.png
+comments.txt
