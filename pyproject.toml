@@ -17,6 +17,9 @@ Pillow = "^9.0.1"
 matplotlib = "^3.5.1"
 wordcloud = "^1.8.1"
 
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
